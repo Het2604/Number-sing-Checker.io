@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container1">
+            <h1>-:Number sing Checker :-</h1>
+
+            <label for="numberinput"> Enter the Number :- </label>
+            <input type="number" id="numberInput">
+
+
+
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+
+
+        function checkNumberSign(number)     {
+            if (number > 0) {
+                return "positive";
+            } else if (number< 0) {
+                return "negative";
+            } else {
+                return zero;
+            }
+        }
+
+        document.getElementById('numberInput').addEventListener('input', function () {
+            let inputNumber = this.value;
+            inputNumber = parseFloat(inputNumber);
+            
+            let result = checkNumberSign(inputNumber);
+        
+            document.getElementById('result').innerHTML = `The number ${inputNumber} is ${result}.`;
+        });
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>
